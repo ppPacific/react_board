@@ -1,3 +1,19 @@
+@import "../../styles/variables.scss";
 .menu{
 
+  .item{
+    @apply flex flex-col gap-2 mb-5
+  }
+  .title{
+    color: $soft-color;
+    @apply text-xs font-bold;
+  }
+  .listItem{
+
+    &:hover{
+      background-color: $soft-bg;
+      @apply rounded-xl;
+    }
+    @apply flex items-center gap-2 p-2;
+  }
 }

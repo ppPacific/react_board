@@ -8,6 +8,7 @@ import Menu from "./components/menu/Menu.tsx";
 import Login from "./pages/login/Login.tsx";
 import "./styles/global.scss";
 import "./index.css";
+import Test from "./pages/test/Test.tsx";
 function App() {
 
   const Layout=()=>{
@@ -48,6 +49,10 @@ function App() {
         {
           path: "products",
           element: <Products/>,
+        },
+        {
+          path: "test",
+          element: <Test/>,
         },
       ]
     },

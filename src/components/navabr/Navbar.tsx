@@ -13,8 +13,8 @@ const Navbar=()=>{
                 <img src={"/app.svg"} className={"icon"} alt={""}/>
                 <img src={"/expand.svg"} className={"icon"} alt={""}/>
                 <div className={"notification"}>
-                    <img src={"/notification.svg"} alt={""}/>
-<span>1</span>
+                    <img src={"/notifications.svg"} alt={""}/>
+                    <span>1</span>
                 </div>
                 <div className={"user"}>
                     <img src={"https://picsum.photos/50/50"} alt={""}/>
@@ -23,7 +23,6 @@ const Navbar=()=>{
                 <img src={"/settings.svg"} className={"icon"} alt={""}/>
 
             </div>
-
         </div>
     )
 }

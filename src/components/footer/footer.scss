@@ -1,3 +1,27 @@
 .footer{
-  
+
+  span{
+    &:first-child{
+      @apply font-bold;
+    }
+    &:last-child{
+      @apply text-xs;
+    }
+    &:first-child:hover{
+      animation: changing-color 3s linear infinite;
+      @apply transition-all ease-in-out -translate-y-1 scale-110
+    }
+  }
+}
+
+@keyframes changing-color {
+  0% {
+    @apply bg-black p-2 rounded;
+  }
+  50%{
+    @apply bg-blue-600 p-2 rounded;;
+  }
+  100%{
+    @apply bg-blue-200 p-2 rounded;;
+  }
 }
