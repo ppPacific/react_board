@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer.tsx";
 import Menu from "./components/menu/Menu.tsx";
 import Login from "./pages/login/Login.tsx";
 import "./styles/global.scss";
+import "./index.css";
 function App() {
 
   const Layout=()=>{
@@ -16,10 +17,11 @@ function App() {
           <Navbar/>
           <div className={"container"}>
             <div className={"menuContainer"}><Menu/></div>
-          </div>
             <div className={"contentContainer"}>
               <Outlet/>
             </div>
+          </div>
+
           <Footer/>
         </div>
     )
