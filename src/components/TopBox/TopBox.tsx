@@ -6,14 +6,23 @@ const TopBox=()=>{
     return (
         <div className={"topBox"}>
             <h1>Top</h1>
-            {topDealUsers.map((user)=>{
-                return (
-                    <div className={"listItem"} key={user.id}>
-                        <div className={"user"}></div>
-                        <span className={"amount"}>${user.amount}</span>
-                    </div>
-                )
-            })}
+            <div className={"list"}>
+
+                {topDealUsers.map((user)=>{
+                    return (
+                        <div className={"listItem"} key={user.id}>
+                            <div className={"user"}>
+                                <img src={user.img} alt={""} />
+                                <div className={"userTexts"}>
+                                    <span className={"username"}>{user.username}</span>
+                                    <span className={"email"}>{user.email}</span>
+                                </div>
+                            </div>
+                            <span className={"amount"}>${user.amount}</span>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 }
