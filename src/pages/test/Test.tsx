@@ -4,7 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 const Test =()=>{
 
@@ -14,10 +16,20 @@ const Test =()=>{
 
             <Swiper
                 spaceBetween={50}
-                slidesPerView={3}
+                slidesPerView={2}
+                navigation
+                pagination={{clickable:true}}
+                scrollbar={{draggable:true}}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
             >
+                {/*{slides.map((slide)=>{*/}
+                {/*    return <SwiperSlide>*/}
+                {/*        <div className={"h-48"}>*/}
+                {/*            <img className={"w-72 object-center"} src={"./pic1.jpg"} alt={"pic1"}/>*/}
+                {/*        </div>*/}
+                {/*    </SwiperSlide>*/}
+                {/*})}*/}
                 <SwiperSlide>
                     <div className={"h-48"}>
                         <img className={"w-72 object-center"} src={"./pic1.jpg"} alt={"pic1"}/>
@@ -41,9 +53,9 @@ const Test =()=>{
                 ...
             </Swiper>
 
-            <div>
-                <img className={"hover:-rotate-6 w-[38%] border-8 border-amber-300"} src={"./pic4.jpg"} alt={"pic4"}/>
-
+            <div className={"flex flex-row gap-x-14"}>
+                <img className={"animate-pulse hover:-rotate-6 w-[28%] border-8 border-amber-300"} src={"./pic4.jpg"} alt={"pic4"}/>
+                <img className={"animate-wiggle w-[18%] object-contain border-8 border-amber-300"} src={"./pic6.jpg"} alt={"pic6"}/>
             </div>
         </div>
     )
