@@ -50,13 +50,17 @@ const Test =()=>{
                         <img className={"w-72 object-contain"} src={"./pic4.jpg"} alt={"pic4"}/>
                     </div>
                 </SwiperSlide>
-                ...
+                {/*pagination*/}
             </Swiper>
 
-            <div className={"flex flex-row gap-x-14"}>
+            <div className={"flex flex-row gap-x-14 mt-4"}>
                 <img className={"animate-pulse hover:-rotate-6 w-[28%] border-8 border-amber-300"} src={"./pic4.jpg"} alt={"pic4"}/>
                 <img className={"animate-wiggle w-[18%] object-contain border-8 border-amber-300"} src={"./pic6.jpg"} alt={"pic6"}/>
             </div>
+
+            <section className={"mt-6"}>
+                <h1 className={"text-left animate-wiggle"}>template</h1>
+            </section>
         </div>
     )
 }
