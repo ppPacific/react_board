@@ -11,13 +11,17 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@types/react-email-editor": "^1.5.6",
+    "@usewaypoint/email-builder": "^0.0.8",
     "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-email-editor": "^1.7.11",
     "react-router-dom": "^6.24.0",
     "recharts": "^2.12.7",
     "sass": "^1.77.6",
-    "swiper": "^11.1.4"
+    "swiper": "^11.1.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
