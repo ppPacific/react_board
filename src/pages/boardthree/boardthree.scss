@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+//.widgets{
+//  display: flex;
+//  justify-items: center;
+//}
+.widget{
+  width: 180px;
+  height: 100px;
+  background-color: #7d858f;
+  //border-color: #2a3447;
+  margin: 1em;
+}
+.page{
+  width: 240px;
+  height: 1000px;
+  border: 1px solid gray;
+}
+.dropped-widget{
+  text-align: center;
+  background-color: #e6e8ea;
+  padding: 2em;
+  margin: 0.5em;
+}
