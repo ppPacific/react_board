@@ -2,7 +2,7 @@ import {useRef} from "react";
 import EmailEditor, {EditorRef, EmailEditorProps} from "react-email-editor";
 
 import React from 'react';
-
+import defaultBlockList from './defaultBlockList.json'
 const Board = ()=>{
     const emailEditorRef = useRef<EditorRef | null>(null);
     //const [preview, setPreview] = useState(false);
@@ -54,25 +54,66 @@ const Board = ()=>{
 
     return (
         <div>
-            <div>
-                <h1>React Email Editor v (Demo)</h1>
+            <div className={"p-4 bg-blue-600 flex flex-row"}>
+                <h1 className={"text-white"}>Email Template Editor</h1>
 
                 {/*<button onClick={togglePreview}>*/}
                 {/*    {preview ? 'Hide' : 'Show'} Preview*/}
                 {/*</button>*/}
-                <button onClick={saveDesign}>Save Design</button>
-                <button onClick={exportHtml}>Export HTML</button>
+                <button className={"p-2 bg-white rounded-xl mr-2 "} onClick={saveDesign}>Save Design</button>
+                <button className={"p-2 bg-white rounded-xl"} onClick={exportHtml}>Export HTML</button>
             </div>
 
             <React.StrictMode>
             <EmailEditor
                 ref={emailEditorRef}
                 //onLoad={onLoad}
+                defaultBlockList={defaultBlockList}
                 onReady={onReady}
                 options={{
                     version: "latest",
+                    tabs: {
+                        content: {
+                            enabled: true,
+                        },
+                        blocks: {
+                            enabled: false,
+                        },
+                        // 'custom#my_tab': {
+                        //     enabled: true,
+                        // }
+                    },
                     appearance: {
-                        theme: "modern_light"
+                        theme: "modern_light",
+                        panels: {
+                            tools: {
+                                dock: 'left'
+                            }
+                        }
+                    },
+                    tools: {
+                        button: {
+                            enabled:true,
+                            properties: {
+                                buttonColors: {
+                                    value: {
+                                        color: "#FFFFFF",
+                                        backgroundColor: "#e03a40",
+                                        hoverColor: "#FFFFFF",
+                                        hoverBackgroundColor: "#075170"
+                                    }
+                                }
+                            }
+                        },
+                        column: {
+                            enabled:true
+                        },
+                        social: {
+                            enabled:true
+                        },
+                    },
+                    features: {
+                        preview: true
                     }
                 }}
             />
